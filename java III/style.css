@@ -1,52 +1,179 @@
-<!doctype html>
-<html lang="sq">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Klinika e CSS: shpëto afishen</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <a class="skip" href="#main">Kalo te përmbajtja</a>
+/* Variablat CSS */
+:root {
+  --primary: #0d6efd;
+  --primary-hover: #0b5ed7;
+  --accent-color: #0f766e;
+  --bg-page: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --border: #e2e8f0;
+ 
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --radius-card: 12px;
+  --radius-btn: 6px;
+}
 
-    <div class="poster-container">
-      <header class="poster-header">
-        <p class="subtitle">Programimi në WWW · Zgjidhje reference</p>
-        <h1 class="main-title">Klubi i debatit</h1>
-      </header>
+/* Box-Sizing Global */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-      <hr class="divider" />
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: var(--space-md);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
 
-      <main id="main" class="poster-card">
-        <div class="tags-group">
-          <span class="badge badge-free">Falas</span>
-          <span class="badge badge-limited">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-            Vende të kufizuara: 20
-          </span>
-          <span class="badge badge-online">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-            Edhe online
-          </span>
-        </div>
+/* Skip link për accessibility */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 10px;
+  background: var(--text-main);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  z-index: 10;
+  text-decoration: none;
+}
 
-        <h2 class="card-title">A duhet kampusi të ketë një kopsht të përbashkët?</h2>
-        <p class="event-details">8 tetor, ora 16:00 · Salla imagjinare B</p>
-        <p class="event-description">Sill një argument, dëgjo një mendim tjetër dhe ndrysho një ide.</p>
+.skip-link:focus {
+  top: 10px;
+}
 
-        <a href="#register" class="btn">Kërko informacion</a>
-      </main>
+/* Kontejneri kryesor */
+.poster-wrapper {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  width: 100%;
+  max-width: 650px;
+  padding: var(--space-xl);
+  border-radius: var(--radius-card);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
 
-      <footer class="poster-footer">
-        Shembull mësimor · Të dhëna të sajuara · Vetëm front end
-      </footer>
-    </div>
-  </body>
-</html>
+.category-tag {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.poster-title {
+  color: var(--text-main);
+  font-size: 2rem;
+  margin: 0.25rem 0 0 0;
+}
+
+.divider {
+  height: 3px;
+  background: linear-gradient(to right, var(--accent-color), var(--primary));
+  margin: var(--space-md) 0 var(--space-lg) 0;
+  border-radius: 2px;
+}
+
+/* Kartela brenda afishes */
+.poster-card {
+  background-color: #f8fafc;
+  padding: var(--space-lg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* Etiketat (Badges) */
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+.tag-free {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.tag-limited {
+  background-color: #fef3c7;
+  color: #b45309;
+  border: 1.5px dashed #fcd34d;
+}
+
+.tag-online {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+/* Teksti */
+.event-title {
+  font-size: 1.25rem;
+  margin: 0 0 var(--space-sm) 0;
+  line-height: 1.4;
+}
+
+.event-time {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.event-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 var(--space-lg) 0;
+}
+
+/* Butoni dhe Gjendjet Focus/Hover */
+.action-btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+  background-color: #0d9488;
+  transform: translateY(-1px);
+}
+
+.action-btn:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* Footer */
+.poster-footer {
+  margin-top: var(--space-lg);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}  
