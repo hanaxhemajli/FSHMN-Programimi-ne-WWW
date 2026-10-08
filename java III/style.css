@@ -1,10 +1,52 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Klinika e CSS: shpëto afishen</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Kalo te përmbajtja</a>
 
-/* Stili bazë dhe box-sizing */
-* {
-    box-sizing: border-box;
-}
+    <div class="poster-container">
+      <header class="poster-header">
+        <p class="subtitle">Programimi në WWW · Zgjidhje reference</p>
+        <h1 class="main-title">Klubi i debatit</h1>
+      </header>
 
-body {
-    font-family: system-ui, sans-serif;
-    margin: 1rem;
-}
+      <hr class="divider" />
+
+      <main id="main" class="poster-card">
+        <div class="tags-group">
+          <span class="badge badge-free">Falas</span>
+          <span class="badge badge-limited">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            Vende të kufizuara: 20
+          </span>
+          <span class="badge badge-online">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            Edhe online
+          </span>
+        </div>
+
+        <h2 class="card-title">A duhet kampusi të ketë një kopsht të përbashkët?</h2>
+        <p class="event-details">8 tetor, ora 16:00 · Salla imagjinare B</p>
+        <p class="event-description">Sill një argument, dëgjo një mendim tjetër dhe ndrysho një ide.</p>
+
+        <a href="#register" class="btn">Kërko informacion</a>
+      </main>
+
+      <footer class="poster-footer">
+        Shembull mësimor · Të dhëna të sajuara · Vetëm front end
+      </footer>
+    </div>
+  </body>
+</html>
