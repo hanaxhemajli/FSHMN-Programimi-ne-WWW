@@ -1,31 +1,162 @@
+:root {
+  --primary-color: #0b5c5e;
+  --primary-hover: #084345;
+  --bg-main: #f0f4f8;
+  --bg-card: #ffffff;
+  --text-dark: #1d2d35;
+  --text-muted: #5c6b73;
+  --border-color: #d1d9e0;
+ 
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --radius: 8px;
+}
 
-<!DOCTYPE html>
-<html lang="sq">
-<head>
-    <meta charset="UTF-8">
-    <title>Klubi i debatit - Afisha</title>
-    <!-- Lidhja e skedarit të jashtëm CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-    <div id="poster" class="poster">
-        <h1>Klubi i debatit</h1>
-        
-        <!-- Etiketat (badges) -->
-        <div class="badges">
-            <span class="badge falas">Falas</span>
-            <span class="badge limit">Vende të kufizuara: 20</span>
-            <span class="badge online">Edhe online</span>
-        </div>
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background-color: #e2e8f0;
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-        <h2>A duhet kampusi të ketë një kopsht të përbashkët?</h2>
-        <p>8 tetor, ora 16:00 - Salla imagjinare B</p>
-        <p>Sill një argument, dëgjo një mendim tjetër dhe ndrysho një ide.</p>
+.skip {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+  border-radius: 4px;
+}
 
-        <!-- Lidhja / Butoni i regjistrimit -->
-        <a href="#" class="btn-register">Kërko informacion</a>
-    </div>
+.skip:focus {
+  top: 10px;
+  left: 10px;
+}
 
-</body>
-</html>
+.poster-container {
+  background-color: var(--bg-main);
+  width: 100%;
+  max-width: 680px;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.poster-header .subtitle {
+  color: #4a607a;
+  font-size: 0.9rem;
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.poster-header .main-title {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid var(--primary-color);
+  margin: var(--spacing-md) 0 var(--spacing-xl) 0;
+}
+
+.poster-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--spacing-xl);
+}
+
+.tags-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.badge-free {
+  border: 1px solid var(--primary-color);
+}
+
+.badge-limited {
+  border: 1.5px dashed var(--primary-color);
+}
+
+.badge-online {
+  border: 1px solid var(--primary-color);
+}
+
+.card-title {
+  color: var(--text-dark);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: 1.3;
+}
+
+.event-details {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.event-description {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn:focus-visible,
+a:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.poster-footer {
+  margin-top: var(--spacing-xl);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
