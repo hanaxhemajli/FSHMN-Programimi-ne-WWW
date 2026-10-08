@@ -1,1 +1,10 @@
 
+/* Stili bazë dhe box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    margin: 1rem;
+}
