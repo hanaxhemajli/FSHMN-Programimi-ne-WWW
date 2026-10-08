@@ -1,162 +1,48 @@
-:root {
-  --primary-color: #0b5c5e;
-  --primary-hover: #084345;
-  --bg-main: #f0f4f8;
-  --bg-card: #ffffff;
-  --text-dark: #1d2d35;
-  --text-muted: #5c6b73;
-  --border-color: #d1d9e0;
- 
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --radius: 8px;
-}
+ <!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Afisha - Klubi i Debatit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Kalo te përmbajtja</a>
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+    <div class="poster-wrapper">
+      <header class="poster-header">
+        <span class="category-tag">Programimi në WWW · Klubi Studentor</span>
+        <h1 class="poster-title">Klubi i Debatit</h1>
+      </header>
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  margin: 0;
-  padding: 1rem;
-  background-color: #e2e8f0;
-  color: var(--text-dark);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+      <div class="divider"></div>
 
-.skip {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--primary-color);
-  color: white;
-  padding: 8px;
-  z-index: 100;
-  text-decoration: none;
-  border-radius: 4px;
-}
+      <main id="main" class="poster-card">
+        <div class="badges-container">
+          <span class="tag tag-free">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            Falas
+          </span>
+          <span class="tag tag-limited">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Vende të kufizuara: 20
+          </span>
+          <span class="tag tag-online">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Edhe online
+          </span>
+        </div>
 
-.skip:focus {
-  top: 10px;
-  left: 10px;
-}
+        <h2 class="event-title">A duhet kampusi të ketë një kopsht të përbashkët?</h2>
+        <p class="event-time">🗓️ 8 tetor, ora 16:00 · 📍 Salla imagjinare B</p>
+        <p class="event-desc">Sill një argument, dëgjo një mendim tjetër dhe ndrysho një ide.</p>
 
-.poster-container {
-  background-color: var(--bg-main);
-  width: 100%;
-  max-width: 680px;
-  padding: var(--spacing-xl);
-  border-radius: var(--radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
+        <a href="#register" class="action-btn">Kërko informacion</a>
+      </main>
 
-.poster-header .subtitle {
-  color: #4a607a;
-  font-size: 0.9rem;
-  margin: 0 0 var(--spacing-xs) 0;
-}
-
-.poster-header .main-title {
-  color: var(--primary-color);
-  font-size: 1.8rem;
-  font-weight: 800;
-  margin: 0;
-}
-
-.divider {
-  border: none;
-  border-top: 2px solid var(--primary-color);
-  margin: var(--spacing-md) 0 var(--spacing-xl) 0;
-}
-
-.poster-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  padding: var(--spacing-xl);
-}
-
-.tags-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-lg);
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--primary-color);
-}
-
-.badge-free {
-  border: 1px solid var(--primary-color);
-}
-
-.badge-limited {
-  border: 1.5px dashed var(--primary-color);
-}
-
-.badge-online {
-  border: 1px solid var(--primary-color);
-}
-
-.card-title {
-  color: var(--text-dark);
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: 0 0 var(--spacing-md) 0;
-  line-height: 1.3;
-}
-
-.event-details {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  margin: 0 0 var(--spacing-sm) 0;
-}
-
-.event-description {
-  color: var(--text-dark);
-  font-size: 0.95rem;
-  margin: 0 0 var(--spacing-lg) 0;
-}
-
-.btn {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: white;
-  text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: background-color 0.2s ease;
-}
-
-.btn:hover {
-  background-color: var(--primary-hover);
-}
-
-.btn:focus-visible,
-a:focus-visible {
-  outline: 3px solid #2563eb;
-  outline-offset: 2px;
-}
-
-.poster-footer {
-  margin-top: var(--spacing-xl);
-  color: var(--text-muted);
-  font-size: 0.8rem;
-}
+      <footer class="poster-footer">
+        <p>Shembull mësimor · Të dhëna të sajuara · Vetëm front end</p>
+      </footer>
+    </div>
+  </body>
+</html>
