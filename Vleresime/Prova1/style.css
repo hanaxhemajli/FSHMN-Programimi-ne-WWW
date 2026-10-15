@@ -1,1 +1,21 @@
 
+*{
+    box-sizing: border-box;
+}
+body { 
+    font-family: system-ui, sans-serif;
+     margin: 100px;
+      whidth:100%;
+      border:2px solid navy;
+ }
+
+.members {
+     min-width: 700px; 
+     padding: 1rem; 
+     border: 2px solid navy;
+     }
+     @media (min-width: 700px) { 
+
+      }
+      :focus-visible { outline: 2px solid navy; outline-offset: 3px; }
+      
