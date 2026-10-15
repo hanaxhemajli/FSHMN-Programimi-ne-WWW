@@ -1,12 +1,16 @@
-# Testet — Varianti C
+# Përgjigjet — Varianti C
 
-Plotëso pasi ta testosh faqen.
+## P1.7
 
-| Testi | Pritja | Rezultati real |
-|---|---|---|
-| 360 px | Tri profile njëra poshtë tjetrës; brenda secilit, emri, fusha dhe lidhja shfaqen vertikalisht. Pa scroll horizontal. |po |
-| 1000 px | Profilet mbeten tri rreshta. Brenda ÇDO profili emri, fusha dhe lidhja shfaqen në tri kolona në të njëjtin rresht. | Po |
-| Menuja dhe Më shumë | ID-të ekzistojnë dhe lidhjet arrijnë te seksioni përkatës | Po |
-| Tab / Enter | Fokusi shihet, lidhja aktivizohet | Po |
-| Tekst i gjatë te paragrafi i parë | Teksti thyhet brenda kutisë, pa scroll horizontal në 360 px | Po |
+Shpjego box-sizing: border-box me width, padding dhe border nga kodi yt.
+
+Përgjigjja ime: box-sizing: border-box ben qe width te perfshije edhe padding dhe border, duke parandaluar tejkalimin e gjeresise.
+
+
+## P1.8
+
+Pse “Më shumë” është lidhje dhe jo button? Kur do të përdorje button? Nuk kërkohet implementim butoni ose JS.
+
+Përgjigjja ime: Lidhja  perdoret per te kaluar ne nje seksion ose faqe tjeter,buttoni perdoret per te  kryer nje veprim.
+
 
