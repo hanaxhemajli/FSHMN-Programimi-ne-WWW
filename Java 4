@@ -1,1 +1,123 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festivali që përshtatet në çdo ekran</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Lidhje për të kaluar direkte te përmbajtja (me tastierë) -->
+    <a class="skip-link" href="#main">Kalo te përmbajtja</a>
 
+    <header class="header-container">
+      <div class="header-content">
+        <p class="subtitle">Programimi në WWW · Java IV</p>
+        <h1>Festivali Shkencor "Shkenca për Të Ardhmen"</h1>
+      </div>
+
+      <!-- Menuja e navigimit (Flexbox & Accessibility) -->
+      <nav aria-label="Menuja kryesore">
+        <ul class="nav-menu">
+          <li><a href="#ballina">Ballina</a></li>
+          <li><a href="#aktivitetet">Aktivitetet</a></li>
+          <li><a href="#orari">Orari</a></li>
+          <li><a href="#rreth-nesh">Rreth Nesh</a></li>
+          <li><a href="#kontakti">Kontakti</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="aktivitetet" class="activities-section">
+        <h2>Programi i Aktiviteve</h2>
+        <p class="section-desc">Eksploroni punëtoritë, ligjëratat dhe demonstrimet tona shkencore.</p>
+
+        <!-- Rrjeti i kartave (Grid Responsive) -->
+        <div class="cards-grid">
+          
+          <!-- Karta 1 (Sfida e Transferimit: Titull 100+ karakterësh) -->
+          <article class="activity-card">
+            <div class="card-image-wrapper">
+              <img src="https://picsum.photos/seed/ai/600/400" alt="Eksplorimi i inteligjencës artificiale" class="card-image" />
+            </div>
+            <div class="card-body">
+              <span class="category">Teknologji & AI</span>
+              <h3 class="card-title">Ligjëratë Speciale mbi Zhvillimin e Inteligjencës Artificiale dhe Ndikimin e Saj në Shoqërinë Moderne të Shekullit XXI</h3>
+              <p class="time">⏰ 10:00 - 11:30</p>
+              <a href="#" class="details-link">Lidhja e detajeve &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Karta 2 -->
+          <article class="activity-card">
+            <div class="card-image-wrapper">
+              <img src="https://picsum.photos/seed/space/600/400" alt="Astrofizikë dhe teleskopë" class="card-image" />
+            </div>
+            <div class="card-body">
+              <span class="category">Astrofizikë</span>
+              <h3 class="card-title">Vëzhgimi i Yjeve dhe Galaksive</h3>
+              <p class="time">⏰ 12:00 - 13:30</p>
+              <a href="#" class="details-link">Lidhja e detajeve &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Karta 3 -->
+          <article class="activity-card">
+            <div class="card-image-wrapper">
+              <img src="https://picsum.photos/seed/robot/600/400" alt="Robotikë praktike" class="card-image" />
+            </div>
+            <div class="card-body">
+              <span class="category">Robotikë</span>
+              <h3 class="card-title">Ndërtimi i Robotit të Parë</h3>
+              <p class="time">⏰ 14:00 - 15:30</p>
+              <a href="#" class="details-link">Lidhja e detajeve &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Karta 4 -->
+          <article class="activity-card">
+            <div class="card-image-wrapper">
+              <img src="https://picsum.photos/seed/bio/600/400" alt="Bioteknologji" class="card-image" />
+            </div>
+            <div class="card-body">
+              <span class="category">Bioteknologji</span>
+              <h3 class="card-title">Misteret e ADN-së Njerëzore</h3>
+              <p class="time">⏰ 16:00 - 17:00</p>
+              <a href="#" class="details-link">Lidhja e detajeve &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Karta 5 -->
+          <article class="activity-card">
+            <div class="card-image-wrapper">
+              <img src="https://picsum.photos/seed/eco/600/400" alt="Ekologji dhe Mjedis" class="card-image" />
+            </div>
+            <div class="card-body">
+              <span class="category">Mjedis</span>
+              <h3 class="card-title">Energjia e Rinovueshme në Praktikë</h3>
+              <p class="time">⏰ 17:15 - 18:30</p>
+              <a href="#" class="details-link">Lidhja e detajeve &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Karta 6 -->
+          <article class="activity-card">
+            <div class="card-image-wrapper">
+              <img src="https://picsum.photos/seed/physics/600/400" alt="Fizikë Kuantike" class="card-image" />
+            </div>
+            <div class="card-body">
+              <span class="category">Fizikë</span>
+              <h3 class="card-title">Eksperimente Kuantike për Fillestarë</h3>
+              <p class="time">⏰ 18:45 - 20:00</p>
+              <a href="#" class="details-link">Lidhja e detajeve &rarr;</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>Shembull mësimor · Të dhëna të sajuara · Vetëm front end</footer>
+  </body>
+</html>
