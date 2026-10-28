@@ -1,1 +1,104 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Media Lab 6</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<main>
+  <header>
+    <img class="brand" src="assets/logo.svg" width="64" height="64" alt="Laboratori WWW">
+    <h1>Një faqe me media të përgatitura siç duhet</h1>
+  </header>
+  
+  <p>Shembuj lokalë për Kapitullin 6. Pamjet dhe tingujt janë modele provë, jo materiale nga një ngjarje reale.</p>
+  
+  <section id="hero">
+    <h2>1. Imazhi kryesor dhe madhësia</h2>
+    <picture>
+      <source srcset="assets/scene-400.webp 400w, assets/scene-800.webp 800w" type="image/webp" sizes="(max-width: 400px) 400px, 400px">
+      <source srcset="assets/scene-400.jpg 400w, assets/scene-800.jpg 800w" type="image/jpeg" sizes="(max-width: 400px) 400px, 400px">
+      <img class="hero" src="assets/scene-400.jpg" width="800" height="450" alt="Imazhi kryesor i skenës testuese">
+    </picture>
+    <p>Imazhi shfaqet deri në 400 CSS px. Lexoni currentSrc dhe dimensionet e skedarit në Network.</p>
+  </section>
 
+  <section>
+    <h2>2. Raster dhe vektor në zmadhim</h2>
+    <div class="row">
+      <figure>
+        <img class="zoom-logo" src="assets/logo-64.png" width="256" height="256" alt="Varianti raster i shenjës së laboratorit">
+        <figcaption>PNG 64×64 i zmadhuar në 256px</figcaption>
+      </figure>
+      <figure>
+        <img class="zoom-logo" src="assets/logo.svg" width="256" height="256" alt="Varianti vektor i shenjës së laboratorit">
+        <figcaption>SVG në 256px</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Alpha dhe halo</h2>
+    <div class="dark-panel">
+      <img class="badge" src="assets/badge-alpha.png" width="180" height="180" alt="Shenjë kontrolli PNG me alpha">
+      <img class="badge" src="assets/badge-matte.gif" width="180" height="180" alt="GIF i përzier paraprakisht me të bardhën">
+      <p>PNG dhe GIF mbi të njëjtin sfond të errët. Provojini edhe mbi të bardhë në DevTools.</p>
+    </div>
+    <div class="overlay">
+      <p>Teksti duhet të mbetet opak, ndërsa vetëm sfondi ka alpha.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. Paleta dhe kompresimi</h2>
+    <figure>
+      <img class="comparison" src="assets/scene-800.jpg" width="800" height="450" alt="JPEG me cilësi më të lartë">
+      <figcaption>JPEG cilësi 85</figcaption>
+    </figure>
+    <figure>
+      <img class="comparison" src="assets/scene-800-low.jpg" width="800" height="450" alt="JPEG me kompresim agresiv">
+      <figcaption>JPEG cilësi 8, të njëjtat dimensione</figcaption>
+    </figure>
+    <figure>
+      <img class="swatch" src="assets/gradient-8-none.png" width="640" height="120" alt="Gradient me tetë tone pa dithering">
+      <figcaption>Paletë me tetë tone, pa dithering</figcaption>
+    </figure>
+    <figure>
+      <img class="swatch" src="assets/gradient-8-dither.png" width="640" height="120" alt="Gradient me të njëjtën paletë dhe dithering">
+      <figcaption>Të njëjtat tetë tone, me dithering</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>5. Video dhe captions</h2>
+    <video controls preload="metadata" poster="assets/poster.jpg" width="640" height="360">
+      <source src="assets/demo.webm" type="video/webm">
+      <source src="assets/demo.mp4" type="video/mp4">
+      <track src="assets/captions-sq.vtt" kind="captions" srclang="sq" label="Shqip" default>
+      Shfletuesi nuk e mbështet elementin video.
+    </video>
+    <p>Video provë 5 sekonda: model me ngjyra dhe figura në lëvizje, me një ton të vazhdueshëm 440 Hz. Nuk ka të folur.</p>
+    <p><a href="assets/demo.mp4">Hap ose shkarko videon MP4</a></p>
+  </section>
+
+  <section>
+    <h2>6. Audio dhe alternativë tekstuale</h2>
+    <audio controls preload="none">
+      <source src="assets/tone.ogg" type="audio/ogg">
+      <source src="assets/tone.mp3" type="audio/mpeg">
+      Shfletuesi nuk e mbështet audio.
+    </audio>
+    <p>Audio: ton provë 440 Hz për 3 sekonda. Nuk ka të folur.</p>
+    <p><a href="assets/tone.mp3">Hap ose shkarko audion MP3</a></p>
+  </section>
+
+  <footer>
+    <p class="status">Statusi: gati për provë. Ruani tekstin e statusit, jo vetëm ngjyrën.</p>
+    <p><a href="assets/manifest.json">Manifesti: bytes, dimensione dhe codec/container</a> · <a href="assets/README_ASSETS.md">Origjina e skedarëve</a></p>
+  </footer>
+</main>
+</body>
+</html>
