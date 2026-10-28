@@ -1,1 +1,124 @@
+:root { 
+  --primary-100: hsl(190 70% 95%); 
+  --primary-500: #075985; 
+  --text: #17324d; 
+  --surface: #ffffff; 
+}
 
+* { 
+  box-sizing: border-box; 
+}
+
+body { 
+  margin: 0; 
+  background: var(--primary-100); 
+  color: var(--text); 
+  font: 1rem/1.5 Arial, sans-serif; 
+}
+
+main { 
+  max-width: 900px; 
+  margin: auto; 
+  padding: 16px; 
+}
+
+header { 
+  background: linear-gradient(135deg, #075985, #164e63); 
+  color: white; 
+  padding: 16px; 
+}
+
+h1 { 
+  font-size: 1.7rem; 
+}
+
+section { 
+  padding: 0; 
+  margin: 1.5rem 0; 
+}
+
+.brand { 
+  width: 64px; 
+  height: 64px; 
+}
+
+.hero { 
+  display: block; 
+  width: 100%; 
+  max-width: 400px; 
+  height: auto; 
+  aspect-ratio: 16 / 9; 
+}
+
+.row { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 1rem; 
+}
+
+figure { 
+  margin: .75rem 0; 
+}
+
+.zoom-logo { 
+  width: min(100%, 256px); 
+  height: auto; 
+}
+
+.badge { 
+  max-width: 100%; 
+  height: auto; 
+}
+
+.dark-panel { 
+  background: #102535; 
+  color: white; 
+  padding: 1rem; 
+}
+
+.overlay { 
+  margin-top: 1rem; 
+  padding: 1rem; 
+  background-color: rgba(255, 255, 255, 0.35); 
+  color: var(--text); 
+}
+
+.comparison { 
+  display: block; 
+  width: min(100%, 400px); 
+  height: auto; 
+}
+
+.swatch { 
+  display: block; 
+  max-width: 100%; 
+  height: auto; 
+}
+
+video { 
+  display: block; 
+  max-width: 100%; 
+  height: auto; 
+  background: black; 
+}
+
+audio { 
+  display: block; 
+  max-width: 100%; 
+}
+
+a { 
+  color: var(--primary-500); 
+}
+
+:focus-visible { 
+  outline: 3px solid #b45309; 
+  outline-offset: 3px; 
+}
+
+.status { 
+  background: var(--surface); 
+  color: var(--text); 
+  padding: 1rem; 
+  border-left: 4px solid var(--primary-500); 
+}
